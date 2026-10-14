@@ -1,6 +1,9 @@
 import sys
 
 import pyglet
+
+pyglet.options["headless"] = True
+
 import pyglet.app
 import pyglet.display
 import pyglet.extlibs
