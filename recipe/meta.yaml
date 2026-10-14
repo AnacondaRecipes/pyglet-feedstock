@@ -17,17 +17,15 @@ build:
   skip: true  # [py2k]
 
 requirements:
-  build:
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
   host:
     - python
     - pip
+    - flit-core >=3.2,<5
   run:
     - python
-    - freetype
-    - future
-    - ffmpeg >=4,<6
+    #- freetype
+    #- future
+    #- ffmpeg >=4,<6
 
 test:
   # We moved all "import ..." tests to `run_tests.py` because on Linux, we
