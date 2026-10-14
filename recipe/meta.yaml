@@ -8,8 +8,6 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 77fae024df940c60917ba604bab9b7e26306d66734186634b698c708cdd9f4be
-  patches:
-    - pyproject.toml.patch  # remove contents of unneeded file.
 
 build:
   number: 0
