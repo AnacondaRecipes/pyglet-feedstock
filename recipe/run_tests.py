@@ -2,7 +2,7 @@ import sys
 
 import pyglet
 
-pyglet.options["headless"] = True
+pyglet.options['shadow_window'] = False
 
 import pyglet.app
 import pyglet.display
