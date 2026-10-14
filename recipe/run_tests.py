@@ -2,7 +2,7 @@ import sys
 
 import pyglet
 import pyglet.app
-import pyglet.canvas
+import pyglet.display
 import pyglet.extlibs
 import pyglet.libs
 import pyglet.media
