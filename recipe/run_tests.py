@@ -2,8 +2,6 @@ import sys
 
 import pyglet
 
-import pyglet.font
-
 # CI workers have no display, skip hidden "shadow window" creation, so pyglet.gl, .window imports succeed.
 pyglet.options['shadow_window'] = False
 
