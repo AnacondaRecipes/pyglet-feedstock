@@ -2,6 +2,8 @@ import sys
 
 import pyglet
 
+import pyglet.font
+
 # CI workers have no display, skip hidden "shadow window" creation, so pyglet.gl, .window imports succeed.
 pyglet.options['shadow_window'] = False
 
@@ -11,6 +13,7 @@ import pyglet.extlibs
 import pyglet.libs
 import pyglet.media
 import pyglet.media.drivers
+import pyglet.font
 
 # Skip to avoid having to install audio drivers.
 # import pyglet.media.drivers.openal
@@ -23,7 +26,6 @@ if sys.platform != 'darwin':
 # Tests currently don't work the Linux CI systems:
 # pyglet.window.xlib.XlibException: Could not create UTF8 text property
 if sys.platform != 'linux':
-    import pyglet.font
     import pyglet.gl
     import pyglet.graphics
     import pyglet.image
