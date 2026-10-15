@@ -18,8 +18,8 @@ import pyglet.font
 # import pyglet.media.drivers.pulse
 
 # Upstream library loader doesn't consider CONDA_PREFIX
-#if sys.platform != 'darwin':
-#    import pyglet.media.codecs.ffmpeg
+if sys.platform != 'darwin':
+    import pyglet.media.codecs.ffmpeg
 
 # Tests currently don't work the Linux CI systems:
 # pyglet.window.xlib.XlibException: Could not create UTF8 text property

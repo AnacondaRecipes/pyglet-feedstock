@@ -35,8 +35,8 @@ test:
   # test script directly.
   requires:
     - libglu  # [linux]
-    # required for pyglet.media.codecs.ffmpeg import tests
-    #- ffmpeg  # [linux or win]
+    # required for pyglet.media.codecs.ffmpeg import test
+    - ffmpeg  # [linux or win]
   files:
     - run_tests.py
   commands:
