@@ -2,9 +2,8 @@ import sys
 
 import pyglet
 
-# OSX CI workers have no display. skip pygelt hidden "shadow window" creation, so pyglet.gl, pyglet.window imports succeed.
-if sys.platform == 'darwin':
-    pyglet.options['shadow_window'] = False
+# CI workers have no display, skip hidden "shadow window" creation, so pyglet.gl, .window imports succeed.
+pyglet.options['shadow_window'] = False
 
 import pyglet.app
 import pyglet.display
