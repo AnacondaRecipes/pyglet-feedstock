@@ -31,12 +31,14 @@ requirements:
 test:
   # import tests needs to set library options prior to importing everything to support no display CI scenario
   requires:
+    - pip
     - libglu  # [linux]
     # required for pyglet.media.codecs.ffmpeg import test
     - ffmpeg  # [linux or win]
   files:
     - run_tests.py
   commands:
+    - pip check
     - python run_tests.py
 
 about:
