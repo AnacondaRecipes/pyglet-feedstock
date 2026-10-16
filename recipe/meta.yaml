@@ -37,7 +37,7 @@ test:
     - pip
     - libglu  # [linux]
     # required for pyglet.media.codecs.ffmpeg import test
-    #- ffmpeg  # [linux or win]
+    - ffmpeg  # [linux or win]
   commands:
     - pip check
     - python -c "from importlib.metadata import version; assert(version('{{ name }}')=='{{ version }}')"
