@@ -28,6 +28,7 @@ requirements:
 
 test:
   # import tests moved to run run_tests.py, as they need to set lib flags prior to importing to work with no display CI scenario.
+  # the project tests require a screen and won't work on CI.
   files:
     - run_tests.py
   requires:
