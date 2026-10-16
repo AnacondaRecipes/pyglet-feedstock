@@ -23,15 +23,15 @@ if sys.platform != 'darwin':
 
 # Tests currently don't work the Linux CI systems:
 # pyglet.window.xlib.XlibException: Could not create UTF8 text property
-if sys.platform != 'linux':
-    import pyglet.gl
-    import pyglet.graphics
-    import pyglet.image
-    import pyglet.image.codecs
-    import pyglet.input
-    import pyglet.text
-    import pyglet.text.formats
-    import pyglet.window
+#if sys.platform != 'linux':
+import pyglet.gl
+import pyglet.graphics
+import pyglet.image
+import pyglet.image.codecs
+import pyglet.input
+import pyglet.text
+import pyglet.text.formats
+import pyglet.window
 
 # Platform-specific tests.
 if sys.platform == 'win32':
