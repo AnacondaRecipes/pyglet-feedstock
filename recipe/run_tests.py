@@ -28,8 +28,8 @@ import pyglet.media.drivers
 # import pyglet.media.drivers.pulse
 
 # Upstream library loader doesn't consider CONDA_PREFIX
-if sys.platform != 'darwin':
-    import pyglet.media.codecs.ffmpeg
+#if sys.platform != 'darwin':
+#    import pyglet.media.codecs.ffmpeg
 
 # Platform-specific tests:
 if sys.platform == 'win32':
