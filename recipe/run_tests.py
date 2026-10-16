@@ -8,10 +8,20 @@ pyglet.options['shadow_window'] = False
 import pyglet.app
 import pyglet.display
 import pyglet.extlibs
+import pyglet.font
+import pyglet.gl
+import pyglet.graphics
+import pyglet.image
+import pyglet.image.codecs
+import pyglet.input
 import pyglet.libs
+import pyglet.text
+import pyglet.text.formats
+import pyglet.window
+
+# media import tests:
 import pyglet.media
 import pyglet.media.drivers
-import pyglet.font
 
 # Skip to avoid having to install audio drivers.
 # import pyglet.media.drivers.openal
@@ -21,19 +31,7 @@ import pyglet.font
 if sys.platform != 'darwin':
     import pyglet.media.codecs.ffmpeg
 
-# Tests currently don't work the Linux CI systems:
-# pyglet.window.xlib.XlibException: Could not create UTF8 text property
-#if sys.platform != 'linux':
-import pyglet.gl
-import pyglet.graphics
-import pyglet.image
-import pyglet.image.codecs
-import pyglet.input
-import pyglet.text
-import pyglet.text.formats
-import pyglet.window
-
-# Platform-specific tests.
+# Platform-specific tests:
 if sys.platform == 'win32':
     import pyglet.libs.win32
     import pyglet.window.win32
