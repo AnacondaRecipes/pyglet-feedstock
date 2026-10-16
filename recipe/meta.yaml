@@ -27,8 +27,10 @@ requirements:
     - ffmpeg >=4,<10
 
 test:
-  # import tests moved to run run_tests.py, as they need to set lib flags prior to importing to work with no display CI scenario.
+  # additional import tests in run run_tests.py need to set lib flags prior to importing others to work with no display CI scenario.
   # the project tests require a screen and won't work on CI.
+  import:
+    - pyglet
   files:
     - run_tests.py
   requires:
