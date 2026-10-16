@@ -33,7 +33,6 @@ test:
     - run_tests.py
   requires:
     - pip
-    - pytest
     - libglu  # [linux]
     # required for pyglet.media.codecs.ffmpeg import test
     - ffmpeg  # [linux or win]
