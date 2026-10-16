@@ -26,19 +26,25 @@ requirements:
   run_constrained:
     - ffmpeg >=4,<10
 
+{% set skip_tests = "" %}
+
 test:
   # import tests needs to set library options prior to importing everything to support no display CI scenario
   requires:
     - pip
+    - pytest
     - libglu  # [linux]
     # required for pyglet.media.codecs.ffmpeg import test
     - ffmpeg  # [linux or win]
   files:
     - run_tests.py
+  source_files:
+    - tests
   commands:
     - pip check
     - python -c "from importlib.metadata import version; assert(version('{{ name }}')=='{{ version }}')"
     - python run_tests.py
+    - pytest -vv --non-interactive {{ skip_tests }} tests
 
 about:
   home: https://pyglet.org
