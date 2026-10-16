@@ -29,7 +29,7 @@ requirements:
 test:
   # additional import tests in run run_tests.py need to set lib flags prior to importing others to work with no display CI scenario.
   # the project tests require a screen and won't work on CI.
-  import:
+  imports:
     - pyglet
   files:
     - run_tests.py
