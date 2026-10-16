@@ -23,7 +23,6 @@ requirements:
     - freetype {{ freetype }}
   run:
     - python
-  run_constrained:
     - ffmpeg >=4,<10
 
 test:
