@@ -42,8 +42,8 @@ elif sys.platform == 'darwin':
     import pyglet.window.cocoa
 elif sys.platform == 'linux':
     import pyglet.libs.x11
+    import pyglet.window.xlib
 
     # Disabled:
     # pyglet.window.xlib.XlibException: Could not create UTF8 text property
 
-    # import pyglet.window.xlib
