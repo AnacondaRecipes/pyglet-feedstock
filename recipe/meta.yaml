@@ -29,10 +29,7 @@ requirements:
     - ffmpeg >=4,<10
 
 test:
-  # We moved all "import ..." tests to `run_tests.py` because on Linux, we
-  # need to run the tests through xvfb-run as some of them require a
-  # (virtual) display. On Windows and macOS, on the other hand, we can run the
-  # test script directly.
+  # import tests needs to set library options prior to importing everything to support no display CI scenario
   requires:
     - libglu  # [linux]
     # required for pyglet.media.codecs.ffmpeg import test
@@ -41,8 +38,6 @@ test:
     - run_tests.py
   commands:
     - python run_tests.py
-    #- python run_tests.py  # [not linux]
-    #- xvfb-run --server-args=":99 -screen 0 1024x768x24 -ac +extension GLX -noreset" python run_tests.py  # [linux]
 
 about:
   home: https://pyglet.org
