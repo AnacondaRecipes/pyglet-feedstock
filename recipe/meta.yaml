@@ -23,8 +23,6 @@ requirements:
     - python
     # while technically optional, needed for basic import of pyglet.font (this behavior may be different on OSX).
     - freetype
-    #- future
-    #- ffmpeg >=4,<6
   run_constrained:
     - ffmpeg >=4,<10
 
