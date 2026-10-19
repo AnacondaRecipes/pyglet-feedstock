@@ -40,6 +40,7 @@ test:
   commands:
     - pip check
     - python -c "from importlib.metadata import version; assert(version('{{ name }}')=='{{ version }}')"
+    - python run_tests.py
 
 about:
   home: https://pyglet.org
