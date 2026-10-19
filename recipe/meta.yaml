@@ -30,8 +30,6 @@ test:
   # the project tests require a screen and won't work on CI.
   imports:
     - pyglet
-  files:
-    - run_tests.py
   requires:
     - pip
     - libglu  # [linux]
@@ -40,7 +38,6 @@ test:
   commands:
     - pip check
     - python -c "from importlib.metadata import version; assert(version('{{ name }}')=='{{ version }}')"
-    - python run_tests.py
 
 about:
   home: https://pyglet.org

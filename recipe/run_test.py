@@ -1,5 +1,7 @@
 import sys
 
+print("running pyglet import test")
+
 import pyglet
 
 # CI workers have no display, skip hidden "shadow window" creation, so pyglet.gl, .window imports succeed.
@@ -43,3 +45,5 @@ elif sys.platform == 'darwin':
 elif sys.platform == 'linux':
     import pyglet.libs.x11
     import pyglet.window.xlib
+
+print("pyglet import test complete")
