@@ -19,10 +19,10 @@ requirements:
     - python
     - pip
     - flit-core >=3.2,<5
-    # while technically optional, needed for basic import of pyglet.font (this behavior may be different on OSX).
-    - freetype {{ freetype }}
   run:
     - python
+    # optional. dynamically loaded when importing pyglet.font (behavior may differ on OSX).
+    - freetype
     - ffmpeg >=4,<10
 
 test:
