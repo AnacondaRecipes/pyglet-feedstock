@@ -1,10 +1,27 @@
 import sys
 
+print("running pyglet import test")
+
 import pyglet
+
+# CI workers have no display, skip hidden "shadow window" creation, so pyglet.gl, .window imports succeed.
+pyglet.options['shadow_window'] = False
+
 import pyglet.app
-import pyglet.canvas
+import pyglet.display
 import pyglet.extlibs
+import pyglet.font
+import pyglet.gl
+import pyglet.graphics
+import pyglet.image
+import pyglet.image.codecs
+import pyglet.input
 import pyglet.libs
+import pyglet.text
+import pyglet.text.formats
+import pyglet.window
+
+# media import tests:
 import pyglet.media
 import pyglet.media.drivers
 
@@ -16,20 +33,7 @@ import pyglet.media.drivers
 if sys.platform != 'darwin':
     import pyglet.media.codecs.ffmpeg
 
-# Tests currently don't work the Linux CI systems:
-# pyglet.window.xlib.XlibException: Could not create UTF8 text property
-if sys.platform != 'linux':
-    import pyglet.font
-    import pyglet.gl
-    import pyglet.graphics
-    import pyglet.image
-    import pyglet.image.codecs
-    import pyglet.input
-    import pyglet.text
-    import pyglet.text.formats
-    import pyglet.window
-
-# Platform-specific tests.
+# Platform-specific tests:
 if sys.platform == 'win32':
     import pyglet.libs.win32
     import pyglet.window.win32
@@ -40,8 +44,6 @@ elif sys.platform == 'darwin':
     import pyglet.window.cocoa
 elif sys.platform == 'linux':
     import pyglet.libs.x11
+    import pyglet.window.xlib
 
-    # Disabled:
-    # pyglet.window.xlib.XlibException: Could not create UTF8 text property
-
-    # import pyglet.window.xlib
+print("pyglet import test complete")
